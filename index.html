@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stayora - Find Your Perfect Stay, Buy, or Rent Property in India</title>
+    <meta name="description"
+        content="India's most trusted platform to buy, sell, or rent properties - Flats, PG, Plots, Shops, and Offices">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Stayora Logo">
+            </a>
+
+            <div class="nav-menu">
+                <div class="nav-item">
+                    <a href="#">Buy ▾</a>
+                    <div class="dropdown">
+                        <a href="client.html">Flats/Apartments</a>
+                        <a href="client.html">Plots/Land</a>
+                        <a href="client.html">Shops</a>
+                        <a href="client.html">Offices</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <a href="#">Rent ▾</a>
+                    <div class="dropdown">
+                        <a href="client.html">Flats/Apartments</a>
+                        <a href="client.html">PG Accommodation</a>
+                        <a href="client.html">Rooms</a>
+                        <a href="client.html">Office Space</a>
+                        <a href="client.html">Shops</a>
+                    </div>
+                </div>
+
+                <a href="landlord.html">Sell Property</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#login" class="btn btn-outline">Log In</a>
+                <a href="#login" class="btn btn-primary">Post Property</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container animate-fade-in">
+            <h1>
+                Find Your Perfect Stay<br>
+                <span class="highlight">According To Your Aura</span>
+            </h1>
+            <p>
+                India's most comprehensive platform for rental properties, property sales, and PG accommodations.
+                <br>Transparent pricing • Verified listings • Landmark-based search
+            </p>
+            <div class="hero-actions">
+                <a href="client.html" class="btn btn-primary">Browse Properties</a>
+                <a href="landlord.html" class="btn btn-secondary">List Your Property</a>
+                <a href="client.html" class="btn btn-outline">Find PG</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Stats Section -->
+    <section style="background: var(--surface); padding: 40px 0; border-top: 1px solid var(--border-color);">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; text-align: center;">
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-color);">50K+</div>
+                    <div style="color: var(--text-secondary);">Active Listings</div>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 800; color: var(--secondary-color);">25+ Cities</div>
+                    <div style="color: var(--text-secondary);">Across India</div>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-orange);">100% Verified</div>
+                    <div style="color: var(--text-secondary);">Properties</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="auth-container">
+        <div class="auth-card">
+            <h2>Welcome to Stayora</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">India's trusted property platform</p>
+            <form id="loginForm">
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="City" required>
+                <input type="tel" placeholder="Mobile Number" required pattern="[0-9]{10}">
+                <select id="roleSelect">
+                    <option value="client">🔍 I want to Rent/Buy (Client)</option>
+                    <option value="landlord">📤 I want to List Property (Landlord)</option>
+                </select>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+                    Continue to Dashboard
+                </button>
+            </form>
+            <p style="text-align: center; margin-top: 20px; color: var(--text-muted); font-size: 0.85rem;">
+                By continuing, you agree to our Terms & Privacy Policy
+            </p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section style="padding: 60px 0; background: var(--bg-secondary);">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 48px; font-size: 2.5rem;">Why Choose Stayora?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
+
+                <div class="card" style="padding: 32px; text-align: center;">
+                    <div
+                        style="width: 64px; height: 64px; margin: 0 auto 16px; background: linear-gradient(135deg, #3b82f6, #2563eb); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; font-weight: bold;">
+                        🏢</div>
+                    <h3 style="margin-bottom: 12px;">Multiple Property Types</h3>
+                    <p style="color: var(--text-secondary);">Flats, Plots, PG, Shops, Offices - All in one place</p>
+                </div>
+
+                <div class="card" style="padding: 32px; text-align: center;">
+                    <div
+                        style="width: 64px; height: 64px; margin: 0 auto 16px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; font-weight: bold;">
+                        📍</div>
+                    <h3 style="margin-bottom: 12px;">Landmark-Based Search</h3>
+                    <p style="color: var(--text-secondary);">Find properties near metro, schools, hospitals</p>
+                </div>
+
+                <div class="card" style="padding: 32px; text-align: center;">
+                    <div
+                        style="width: 64px; height: 64px; margin: 0 auto 16px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; font-weight: bold;">
+                        ✓</div>
+                    <h3 style="margin-bottom: 12px;">100% Verified</h3>
+                    <p style="color: var(--text-secondary);">All properties and owners are verified</p>
+                </div>
+
+                <div class="card" style="padding: 32px; text-align: center;">
+                    <div
+                        style="width: 64px; height: 64px; margin: 0 auto 16px; background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; font-weight: bold;">
+                        ₹</div>
+                    <h3 style="margin-bottom: 12px;">Transparent Pricing</h3>
+                    <p style="color: var(--text-secondary);">No hidden charges, clear pricing in ₹</p>
+                </div>
+
+                <div class="card" style="padding: 32px; text-align: center;">
+                    <div
+                        style="width: 64px; height: 64px; margin: 0 auto 16px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; font-weight: bold;">
+                        ▶</div>
+                    <h3 style="margin-bottom: 12px;">Video Tours</h3>
+                    <p style="color: var(--text-secondary);">Virtual property tours before visiting</p>
+                </div>
+
+                <div class="card" style="padding: 32px; text-align: center;">
+                    <div
+                        style="width: 64px; height: 64px; margin: 0 auto 16px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; font-weight: bold;">
+                        ⚙</div>
+                    <h3 style="margin-bottom: 12px;">Advanced Filters</h3>
+                    <p style="color: var(--text-secondary);">Filter by BHK, parking, amenities, and more</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Stayora Logo" style="height: 50px;">
+                    </div>
+                    <p style="color: var(--text-secondary); margin: 16px 0; line-height: 1.6;">
+                        India's most trusted platform for buying, selling, and renting properties. Find your perfect
+                        stay according to your aura.
+                    </p>
+
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="client.html">Browse Properties</a></li>
+                        <li><a href="landlord.html">List Property</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Property Types -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Property Types</h4>
+                    <ul class="footer-links">
+                        <li><a href="client.html">Flats for Rent</a></li>
+                        <li><a href="client.html">Flats for Sale</a></li>
+                        <li><a href="client.html">PG Accommodation</a></li>
+                        <li><a href="client.html">Plots & Land</a></li>
+                        <li><a href="client.html">Commercial Spaces</a></li>
+                        <li><a href="client.html">Shops & Offices</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Support -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:support@stayora.com">support@stayora.com</a></li>
+                        <li>Phone: <a href="tel:+911234567890">+91 12345 67890</a></li>
+                        <li>Live Chat: 24/7</li>
+                    </ul>
+                    <h4 class="footer-heading" style="margin-top: 24px;">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>© 2026 Stayora. All rights reserved.</p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Button -->
+    <button id="chatbotButton" class="chatbot-button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+    </button>
+
+    <!-- Chatbot Container -->
+    <div id="chatbotContainer" class="chatbot-container">
+        <div class="chatbot-header">
+            <div>
+                <h3 style="margin: 0;">Stayora Assistant</h3>
+                <p style="margin: 0; opacity: 0.9; font-size: 0.85rem;">Online now</p>
+            </div>
+            <button id="chatbotClose" class="chatbot-close">×</button>
+        </div>
+        <div id="chatMessages" class="chatbot-messages"></div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="chatSend" class="btn btn-primary">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+
+</html>
