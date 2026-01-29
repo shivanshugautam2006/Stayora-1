@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,8 @@
 </head>
 
 <body>
- <!-- Navbar -->
+
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
@@ -56,6 +57,7 @@
     </nav>
 
     <!-- Hero Section -->
+
     <header class="hero">
         <div class="container animate-fade-in">
             <h1>
@@ -64,7 +66,7 @@
             </h1>
             <p>
                 India's most comprehensive platform for rental properties, property sales, and PG accommodations.
-                <br>Transparent pricing â€¢ Verified listings â€¢ Landmark-based search
+                <br>Transparent pricing • Verified listings • Landmark-based search
             </p>
             <div class="hero-actions">
                 <a href="client.html" class="btn btn-primary">Browse Properties</a>
@@ -73,8 +75,67 @@
             </div>
         </div>
     </header>
+    <!-- Search & Filter Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <!-- Rent/Buy Toggle -->
+                <div class="toggle-container">
+                    <div class="toggle-switch">
+                        <div class="toggle-option active" data-type="rent">Rent</div>
+                        <div class="toggle-option" data-type="buy">Buy</div>
+                    </div>
+                </div>
 
-    <!-- Quick Stats Section -->
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <div class="search-input-group">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" placeholder="Search by locality or landmark..." id="locationSearch">
+                    </div>
+                    <select id="cityFilter">
+                        <option value="all">All Cities</option>
+                        <option value="Noida">Noida</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Gurgaon">Gurgaon</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Mumbai">Mumbai</option>
+                    </select>
+                    <select id="propertyTypeFilter">
+                        <option value="all">All Properties</option>
+                        <option value="flat">Flat/Apartment</option>
+                        <option value="pg">PG</option>
+                        <option value="room">Room</option>
+                        <option value="office">Office Space</option>
+                        <option value="shop">Shop</option>
+                    </select>
+                    <select id="bhkFilter">
+                        <option value="all">BHK</option>
+                        <option value="1">1 BHK</option>
+                        <option value="2">2 BHK</option>
+                        <option value="3">3 BHK</option>
+                        <option value="4">4+ BHK</option>
+                    </select>
+                    <button class="btn btn-primary" onclick="renderListings()">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Listings -->
+    <section style="padding: 40px 0; min-height: 600px;">
+        <div class="container hidden-scrollbar">
+            <h2 style="margin-bottom: 24px; font-weight: 700;">Featured Properties</h2>
+
+            <div id="listingsContainer" class="grid-listings">
+                <!-- Listings will be injected here by script.js -->
+            </div>
+        </div>
+    </section>
     <section style="background: var(--surface); padding: 40px 0; border-top: 1px solid var(--border-color);">
         <div class="container">
             <div
@@ -107,8 +168,8 @@
                 <input type="text" placeholder="City" required>
                 <input type="tel" placeholder="Mobile Number" required pattern="[0-9]{10}">
                 <select id="roleSelect">
-                    <option value="client">ðŸ” I want to Rent/Buy (Client)</option>
-                    <option value="landlord">ðŸ“¤ I want to List Property (Landlord)</option>
+                    <option value="client">🔍 I want to Rent/Buy (Client)</option>
+                    <option value="landlord">📤 I want to List Property (Landlord)</option>
                 </select>
                 <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
                     Continue to Dashboard
@@ -120,51 +181,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section style="padding: 60px 0; background: var(--bg-secondary);">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 48px; font-size: 2.5rem;">Why Choose Stayora?</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px;">
 
-                <div class="card" style="padding: 32px; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">ðŸ¢</div>
-                    <h3 style="margin-bottom: 12px;">Multiple Property Types</h3>
-                    <p style="color: var(--text-secondary);">Flats, Plots, PG, Shops, Offices - All in one place</p>
-                </div>
-
-                <div class="card" style="padding: 32px; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">ðŸ“</div>
-                    <h3 style="margin-bottom: 12px;">Landmark-Based Search</h3>
-                    <p style="color: var(--text-secondary);">Find properties near metro, schools, hospitals</p>
-                </div>
-
-                <div class="card" style="padding: 32px; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">âœ…</div>
-                    <h3 style="margin-bottom: 12px;">100% Verified</h3>
-                    <p style="color: var(--text-secondary);">All properties and owners are verified</p>
-                </div>
-
-                <div class="card" style="padding: 32px; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">ðŸ’°</div>
-                    <h3 style="margin-bottom: 12px;">Transparent Pricing</h3>
-                    <p style="color: var(--text-secondary);">No hidden charges, clear pricing in â‚¹</p>
-                </div>
-
-                <div class="card" style="padding: 32px; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">ðŸŽ¥</div>
-                    <h3 style="margin-bottom: 12px;">Video Tours</h3>
-                    <p style="color: var(--text-secondary);">Virtual property tours before visiting</p>
-                </div>
-
-                <div class="card" style="padding: 32px; text-align: center;">
-                    <div style="font-size: 3rem; margin-bottom: 16px;">ðŸ…¿ï¸</div>
-                    <h3 style="margin-bottom: 12px;">Advanced Filters</h3>
-                    <p style="color: var(--text-secondary);">Filter by BHK, parking, amenities, and more</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -179,13 +196,7 @@
                         India's most trusted platform for buying, selling, and renting properties. Find your perfect
                         stay according to your aura.
                     </p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon" title="Facebook">ðŸ“˜</a>
-                        <a href="#" class="social-icon" title="Twitter">ðŸ¦</a>
-                        <a href="#" class="social-icon" title="Instagram">ðŸ“·</a>
-                        <a href="#" class="social-icon" title="LinkedIn">ðŸ’¼</a>
-                        <a href="#" class="social-icon" title="YouTube">ðŸ“º</a>
-                    </div>
+
                 </div>
 
                 <!-- Quick Links -->
@@ -194,8 +205,8 @@
                     <ul class="footer-links">
                         <li><a href="client.html">Browse Properties</a></li>
                         <li><a href="landlord.html">List Property</a></li>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="index.html#contact">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
                         <li><a href="#">Careers</a></li>
                         <li><a href="#">Blog</a></li>
                     </ul>
@@ -233,13 +244,8 @@
 
             <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>Â© 2026 Stayora. All rights reserved. | Made with â¤ï¸ in India</p>
-                <div class="footer-badges">
-                    <span class="badge badge-success">âœ… 100% Verified</span>
-                    <span class="badge badge-success">✅ 100% Verified</span>
-                    <span class="badge badge-primary">🔒 Secure</span>
-                    <span class="badge badge-warning">⚡ Fast</span>
-                </div>
+                <p>© 2026 Stayora. All rights reserved.</p>
+
             </div>
         </div>
     </footer>
@@ -271,6 +277,5 @@
     <script src="script.js"></script>
     <script src="chatbot.js"></script>
 </body>
-
 
 </html>
